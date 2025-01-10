@@ -1,13 +1,13 @@
 
+header {
+    text-align: center;
+}
+
 body {
-    font-family: Arial, sans-serif;
     color: #1671e9;
 }
 
-hr {
-    color:#1671e9
 
-}
 main {
     text-align: center;
 }
@@ -19,23 +19,5 @@ main {
 .container-inner {
     flex: auto;
     margin : 5px;
-}
 
-.button-container {
-    margin-bottom: 20px;
-}
-
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #1671e9;
-    border-color: #fff;
-    color: #fff;
-}
-
-.text {
-    margin-top: 10px;
-    font-size: 14px;
-    color: #1671e9;
 }
