@@ -11,16 +11,25 @@
     <body>
         <header>
             <h1>Léo Jordan - portfolio</h1>
+            <div id="profile"></div>
         </header>
         
         <main>
         <div class="container">
             <div class="container-inner">
-                <h2>Présentation personelle</h2>
+                <!-- Bouton 1 : Affiche ou cache le texte lorsqu'on clique -->
+                    <div class="button-container">
+                        <button id="button1">Présentation personelle</button>
+                        <h2 id="text1" class="text" style="display: none;">Présentation personelle</h2>
+                    </div>
             </div>
 
             <div class="container-inner">
-                <h2>Compétence technique</h2>
+                    <div class="button-container">
+                        <button id="button2">Compétence technique</button>
+                        <h2 id="text2" class="text" style="display: none;">Compétence technique</h2>
+                    </div>
+                <!-- <h2>Compétence technique</h2> -->
             </div>
 
         </div>
@@ -30,11 +39,38 @@
         </div>
 
         <div>
-            <h2>Projet GitHub</h2>
+            <h2>Projet Git</h2>
+            <button id="display"> Pour afficher mes projets Git </button>
+            <div id="repos"></div>
         </div>
 
         </main>
 
 
     </body>
+
+
+    <script src="script.js"></script>
+    
+    <script>
+    // Fonctionnalité du Bouton 1
+        document.getElementById('button1').addEventListener('click', function() {
+            const text2 = document.getElementById('text1');
+            if (text2.style.display === 'none') {
+                text2.style.display = 'block';
+            } else {
+                text2.style.display = 'none';
+            }
+        });
+
+        // Fonctionnalité du Bouton 2
+        document.getElementById('button2').addEventListener('click', function() {
+            const text2 = document.getElementById('text2');
+            if (text2.style.display === 'none') {
+                text2.style.display = 'block';
+            } else {
+                text2.style.display = 'none';
+            }
+        });
+    </script>
 </html>
