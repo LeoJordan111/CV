@@ -3,14 +3,20 @@ const profileDiv = document.getElementById("profile");
 const reposDiv = document.getElementById("repos");
 const display = document.querySelector("#display")
 
+// Jeton d'accès personnel (Remplacez par votre propre jeton sécurisé)
+// const token = "";
+
 // Fonction pour récupérer et afficher les données du profil GitHub
 async function fetchGitHubProfile(username) {
     try {
-        const response = await fetch(`https://api.github.com/users/${username}`);
+        const response = await fetch(`https://api.github.com/users/${username}`, {
+            headers: {
+                // Authorization: `Bearer ${token}`
+            }
+        });
         if (!response.ok) {
             throw new Error(`GitHub user not found: ${response.statusText}`);
         }
-        
         const data = await response.json();
 
         // console.log(data)
@@ -20,7 +26,7 @@ async function fetchGitHubProfile(username) {
             <img src="${data.avatar_url}" alt="${data.login}'s avatar" style="width: 150px; border-radius: 50%; margin-bottom: 10px;">
             <h2>${data.name || data.login}</h2>
             <p>${data.bio || "No bio available."}</p>
-            <p>${data.email}</p>
+            <p>${data.email || "leojordan.111@gmail.com"}</p>
             <p>Public Repositories: ${data.public_repos}</p>
             <a href="${data.html_url}" target="_blank" style="text-decoration: none; color: blue;">View GitHub Profile</a>
         `;

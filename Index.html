@@ -32,12 +32,19 @@
                         Technologie : html, CSS, git, JavaScript</h2>
                 </div>
             </div>
+
+            <div class="container-inner">
+                <!-- Bouton 3 : Affiche ou cache le texte lorsqu'on clique -->
+                <div class="button-container">
+                    <button id="button3">Expériences professionelles</button>
+                    <h2 id="text3" class="text" style="display: none;">
+                        Lien de <a rel="stylesheet" target="_blank" href="pj/CVOnline_LeoJORDAN.pdf">Mon CV</a> avant ma reconversion</h2> 
+                </div>
+            </div>
+
         </div>
         <hr>
-        <div>
-            <h2>Expérience pro</h2>
-        </div>
-        <hr>
+    
         <div>
             <h2>Mes projets GitHub</h2>
             <button id="display">Pour afficher mes projets GitHub</button>
@@ -62,6 +69,16 @@
         // Fonctionnalité du Bouton 2
         document.getElementById('button2').addEventListener('click', function() {
             const text2 = document.getElementById('text2');
+            if (text2.style.display === 'none') {
+                text2.style.display = 'block';
+            } else {
+                text2.style.display = 'none';
+            }
+        });
+
+        // Fonctionnalité du Bouton 3
+        document.getElementById('button3').addEventListener('click', function() {
+            const text2 = document.getElementById('text3');
             if (text2.style.display === 'none') {
                 text2.style.display = 'block';
             } else {
