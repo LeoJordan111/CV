@@ -28,7 +28,9 @@ async function fetchGitHubProfile(username) {
             <p>${data.bio || "No bio available."}</p>
             <p>${data.email || "leojordan.111@gmail.com"}</p>
             <p>Public Repositories: ${data.public_repos}</p>
-            <a href="${data.html_url}" target="_blank" style="text-decoration: none; color: blue;">View GitHub Profile</a>
+            <a href="${data.html_url}" target="_blank" style="text-decoration: none; color: blue;">
+            <box-icon type='logo' name='github' color="#1671e9"></box-icon></a>
+            <box-icon type='logo' name='linkedin' color="#1671e9">
         `;
 
 
