@@ -10,16 +10,21 @@ async function fetchGitHubProfile(username) {
         if (!response.ok) {
             throw new Error(`GitHub user not found: ${response.statusText}`);
         }
-        const data = await response.json();
         
+        const data = await response.json();
+
+        // console.log(data)
+
         // Construire le contenu HTML à partir des données du profil
         const profileHTML = `
             <img src="${data.avatar_url}" alt="${data.login}'s avatar" style="width: 150px; border-radius: 50%; margin-bottom: 10px;">
             <h2>${data.name || data.login}</h2>
             <p>${data.bio || "No bio available."}</p>
+            <p>${data.email}</p>
             <p>Public Repositories: ${data.public_repos}</p>
             <a href="${data.html_url}" target="_blank" style="text-decoration: none; color: blue;">View GitHub Profile</a>
         `;
+
 
         // Insérer le contenu dans la div
         profileDiv.innerHTML = profileHTML;
@@ -27,6 +32,7 @@ async function fetchGitHubProfile(username) {
         profileDiv.innerHTML = `<p>Error: ${error.message}</p>`;
     }
 }
+    // console.log(reponse)
 
 // Fonction pour récupérer et afficher les dépôts publics GitHub
 async function fetchGitHubRepos(username) {
@@ -35,6 +41,7 @@ async function fetchGitHubRepos(username) {
         if (!response.ok) {
             throw new Error(`GitHub repos not found: ${response.statusText}`);
         }
+        // console.log(reponse)
         const repos = await response.json();
 
         // Construire le contenu HTML pour chaque dépôt
