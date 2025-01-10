@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Léo Jordan - ...">
+        <title>CV Online Léo Jordan</title>
+        <link rel="stylesheet" type="text/css" href="index.css">
+    </head>
+    <body>
+        <header>
+            <div id="profile"></div>
+        <hr>
+        </header>
+        
+        <main>
+        <div class="container">
+            <div class="container-inner">
+                <!-- Bouton 1 : Affiche ou cache le texte lorsqu'on clique -->
+                <div class="button-container">
+                    <button id="button1">Présentation personelle</button>
+                    <h2 id="text1" class="text" style="display: none;">Présentation personelle</h2>
+                </div>
+            </div>
+
+            <div class="container-inner">
+                <!-- Bouton 2 : Affiche ou cache le texte lorsqu'on clique -->
+                <div class="button-container">
+                    <button id="button2">Compétence technique</button>
+                    <h2 id="text2" class="text" style="display: none;">
+                        Technologie : html, CSS, git, JavaScript</h2>
+                </div>
+            </div>
+
+            <div class="container-inner">
+                <!-- Bouton 3 : Affiche ou cache le texte lorsqu'on clique -->
+                <div class="button-container">
+                    <button id="button3">Expériences professionelles</button>
+                    <h2 id="text3" class="text" style="display: none;">
+                        Lien de <a rel="stylesheet" target="_blank" href="pj/CVOnline_LeoJORDAN.pdf">Mon CV</a> avant ma reconversion</h2> 
+                </div>
+            </div>
+
+        </div>
+        <hr>
+    
+        <div>
+            <h2>Mes projets GitHub</h2>
+            <button id="display">Pour afficher mes projets GitHub</button>
+            <div id="repos"></div>
+        </div>
+        </main>
+    </body>
+
+
+    <script src="script.js"></script>
+    <script>
+    // Fonctionnalité du Bouton 1
+        document.getElementById('button1').addEventListener('click', function() {
+            const text2 = document.getElementById('text1');
+            if (text2.style.display === 'none') {
+                text2.style.display = 'block';
+            } else {
+                text2.style.display = 'none';
+            }
+        });
+
+        // Fonctionnalité du Bouton 2
+        document.getElementById('button2').addEventListener('click', function() {
+            const text2 = document.getElementById('text2');
+            if (text2.style.display === 'none') {
+                text2.style.display = 'block';
+            } else {
+                text2.style.display = 'none';
+            }
+        });
+
+        // Fonctionnalité du Bouton 3
+        document.getElementById('button3').addEventListener('click', function() {
+            const text2 = document.getElementById('text3');
+            if (text2.style.display === 'none') {
+                text2.style.display = 'block';
+            } else {
+                text2.style.display = 'none';
+            }
+        });
+    </script>
+</html>
